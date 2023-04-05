@@ -1,0 +1,37 @@
+{:id 1
+ :type "Butas"
+ :location {:city "Vilnius"
+            :street "Pilies g."
+            :building 10
+            :apartment 5
+            :floor 3
+            :gps {:latitude 54.686435
+                  :longitude 25.286712}}
+ :rooms 2
+ :area 50
+ :window-directions ["Šiaurė" "Rytai"]
+ :price 700
+ :description "Jaukus dviejų kambarių butas Vilniaus senamiestyje. Pilnai įrengtas ir aprūpintas viskuo, ko reikia patogiam gyvenimui - virtuvė su šaldytuvu, kaitlente ir mikrobangų krosnele, skalbimo mašina, greitas internetas. Puiki vieta šalia kavinių, parduotuvių ir viešojo transporto. Ilgalaikio nuomos variantas."
+ :contact {:name "John Doe"
+           :phone ["+370 123 45678" "+370 987 65432"]
+           :email "johndoe@example.com"
+           :user-id "johndoe123"}
+ :amenities ["Virtuvė" "Skalbimo mašina" "Greitas internetas"]
+ :policies {:dogs "Leidžiama su papildoma užstatu"
+            :children "Sveiki"
+            :music "Nerekomenduojame garsiai muzikos groti po 22 val."
+            :smoking "Neleidžiama"}
+ :images ["https://picsum.photos/400/300?random=1" 
+          "https://picsum.photos/400/300?random=2"]
+ :contract {:deposit 700
+            :minimum-period "12 mėnesių"}
+ :parking "Gatvėje yra vietų, garažas yra netoli"
+ :utility-bills {:summer 80
+                 :winter 150}
+ :furniture ["Didelė lova"
+             "Sofa"
+             "Valgomojo stalas"
+             "Darbo stalas"
+             "Lempučių"]
+ }
+
