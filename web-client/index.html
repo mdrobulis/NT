@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Real-Estate Search</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+</head>
+<body>
+	<div class="search-bar">
+		<input type="text" placeholder="Search...">
+		<button>Search</button>
+	</div>
+	<div class="search-filters">
+		<h2>Filters</h2>
+		<label for="price-filter">Price:</label>
+		<input type="range" min="0" max="1000000" step="1000" id="price-filter">
+		<label for="area-filter">Area:</label>
+		<input type="range" min="0" max="500" step="5" id="area-filter">
+		<label for="rooms-filter">Rooms:</label>
+		<input type="range" min="0" max="5" step="1" id="rooms-filter">
+		<!-- more filters here -->
+	</div>
+	<div class="property-list">
+		<div class="property">
+			<img src="https://picsum.photos/200">
+			<div class="property-info">
+				<h3>Property 1</h3>
+				<p>Price: $100,000</p>
+				<p>Area: 75 sqm</p>
+				<p>Rooms: 2</p>
+			</div>
+		</div>
+		<div class="property">
+			<img src="https://picsum.photos/200">
+			<div class="property-info">
+				<h3>Property 2</h3>
+				<p>Price: $200,000</p>
+				<p>Area: 100 sqm</p>
+				<p>Rooms: 3</p>
+			</div>
+		</div>
+		<!-- more properties here -->
+	</div>
+	<div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+	<script >
+var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+    }).addTo(map);
+    L.marker([51.5, -0.09]).addTo(map)
+      .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+    </script>
+</body>
+</html>
